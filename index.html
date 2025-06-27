@@ -4,58 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BABYFOX Bio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: 'Space Mono', monospace;
-            background-color: #1a001a; 
-            color: #e0b0ff;
+            background-color: #1a1a1a; 
+            color: #f0f0f0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             box-sizing: border-box;
+            background-image: url(''); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .container {
-            background-color: #330033;
-            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 0 20px rgba(224, 176, 255, 0.5);
-            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            text-align: left;
             max-width: 600px;
             width: 100%;
         }
         h1 {
-            font-family: 'Kanit', sans-serif;
-            color: #ff66ff;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-family: 'Space Mono', monospace;
+            color: #ff0000;
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+            display: inline-block;
         }
-        .info-item {
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            color: #ff0000;
+            font-size: 1.5em;
+            margin-top: 30px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ff0000;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .info-item, .social-item {
+            margin-bottom: 10px;
             font-size: 1.1em;
+            line-height: 1.4;
         }
         .info-item strong {
-            color: #ff99ff;
+            color: #ffffff;
+            font-weight: 700;
         }
         .links a {
-            display: inline-block;
-            margin: 10px;
-            color: #e0b0ff;
-            font-size: 1.5em;
+            display: block;
+            margin: 10px 0;
+            color: #ff0000;
+            font-size: 1.2em;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .links a:hover {
-            color: #ff66ff;
+            color: #ffffff;
+        }
+        .links i {
+            margin-right: 8px;
         }
         .eye-icon {
-            font-size: 3em;
-            color: #ff66ff;
-            margin-top: 20px;
+            font-size: 2.5em;
+            color: #ff0000;
+            margin-top: 25px;
+            text-align: left;
             animation: blink 1.5s infinite alternate;
         }
         @keyframes blink {
@@ -63,26 +88,28 @@
             to { opacity: 0.5; }
         }
         .counter-placeholder {
-            margin-top: 15px;
-            font-size: 1.2em;
-            color: #ff99ff;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #cccccc;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>BABYFOX BIO</h1>
-        <div class="info-item">MY NAME::<strong>𝐁𝐀𝐁𝐘𝐅𝐎𝐗</strong></div>
-        <div class="info-item">MY AGE::<strong>17</strong></div>
-        <div class="info-item">MY COUNTRY::<strong>RUSSIA</strong></div>
-        <div class="info-item">MY CITY::<strong>Krasnoyarsk Krai</strong></div>
-        <div class="info-item">MY NUMBER::<strong>+9887389287302</strong></div>
-        <div class="info-item">MY VALID NUMBER::<strong>+79999999999</strong></div>
 
-        <div class="info-item">𝐌𝐘 𝐊𝐀𝐒𝐓𝐀:<strong>𝐎𝐒ИНТ</strong></div>
-        <div class="info-item">𝐌𝐘 𝐂𝐋𝐀𝐍:<strong>#𝙶𝙰𝚉𝚝eam</strong></div>
-        <div class="info-item">𝐌𝐘 𝐃𝐄𝐅:<strong>???</strong></div>
+        <div class="section-title">My bio:</div>
+        <div class="info-item">Name: <strong>𝐁𝐀𝐁𝐘𝐅𝐎𝐗</strong></div>
+        <div class="info-item">Age: <strong>17</strong></div>
+        <div class="info-item">Country: <strong>RUSSIA</strong></div>
+        <div class="info-item">City: <strong>Krasnoyarsk Krai</strong></div>
+        <div class="info-item">Phone number: <strong>+9887389287302</strong></div>
+        <div class="info-item">Valid number: <strong>+79999999999</strong></div>
+        <div class="info-item">Kasta: <strong>OSINT</strong></div>
+        <div class="info-item">Clan: <strong>#𝙶𝙰𝚉𝚝eam</strong></div>
+        <div class="info-item">Def: <strong>???</strong></div>
 
+        <div class="section-title">My social media:</div>
         <div class="links">
             <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank">
                 <i class="fab fa-telegram"></i> My Shop: https://t.me/FIZSHOPOTBABYFOX
