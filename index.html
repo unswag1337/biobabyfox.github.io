@@ -55,7 +55,7 @@
 
         h1.main-title {
             font-family: 'Space Mono', monospace;
-            color: #9900cc; /* Темнее фиолетовый */
+            color: #9900cc;
             margin-bottom: 30px;
             text-align: left;
             width: 100%;
@@ -65,7 +65,7 @@
 
         .section-title {
             font-family: 'Space Mono', monospace;
-            color: #9900cc; /* Темнее фиолетовый */
+            color: #9900cc;
             font-size: 2em;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -91,7 +91,7 @@
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
         }
         .bio-item .value {
-            color: #9900cc; /* Темно-фиолетовый */
+            color: #9900cc;
             text-shadow: none; 
         }
 
@@ -99,16 +99,20 @@
             margin-top: 25px;
             margin-bottom: 25px;
             font-size: 1.1em;
+            text-align: left; /* Важно, чтобы ссылка выравнивалась по левому краю */
         }
         .contacts .social-links a {
             text-decoration: none;
             margin-bottom: 10px;
             transition: color 0.3s ease, text-shadow 0.3s ease;
             font-weight: 700;
-            display: flex; /* Использовать flex для выравнивания иконки и текста */
-            align-items: center; /* Выравнивание по центру */
-            gap: 10px; /* Отступ между иконкой и текстом */
-            font-size: 1.2em;
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            font-size: 1.2em; /* Размер как у био-пунктов */
+            color: #00ccff; /* Голубой неоновый */
+            text-shadow: 0 0 10px rgba(0, 204, 255, 0.7), 0 0 20px rgba(0, 204, 255, 0.5);
+            /* Уберем margin-left, чтобы он выравнивался как обычный пункт */
         }
         .contacts .social-links a:hover {
             filter: brightness(1.5);
@@ -133,7 +137,7 @@
         .visitor-counter .eye-svg-icon {
             width: 35px;
             height: 35px;
-            fill: #9900cc; /* Темнее фиолетовый */
+            fill: #9900cc;
             vertical-align: middle;
         }
         .visitor-counter img.visitor-badge {
@@ -189,22 +193,17 @@
         <div class="bio-item">
             <i class="fas fa-birthday-cake"></i><span class="label">Age:</span> <span class="value">17.</span>
         </div>
-        
-        <div class="bio-item">
-            <i class="fab fa-telegram"></i><a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="telegram value">My fiz shop.</a>
-        </div>
-
-        <div class="bio-item">
-            <i class="fas fa-flag"></i><span class="label">Country:</span> <span class="value">USA.</span>
-        </div>
-        <div class="bio-item">
-            <i class="fas fa-map-marker-alt"></i><span class="label">City:</span> <span class="value">LOS ANGELES.</span>
-        </div>
         <div class="bio-item">
             <i class="fas fa-phone"></i><span class="label">MY NUMBER:</span> <span class="value">+98 ???.</span>
         </div>
         <div class="bio-item">
             <i class="fas fa-phone"></i><span class="label">MY VALID NUMBER:</span> <span class="value">+7 ???.</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-flag"></i><span class="label">Country:</span> <span class="value">USA.</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-map-marker-alt"></i><span class="label">City:</span> <span class="value">LOS ANGELES.</span>
         </div>
         <div class="bio-item">
             <i class="fas fa-gem"></i><span class="label">Kasta:</span> <span class="value">OSINT.</span>
@@ -216,12 +215,20 @@
             <i class="fas fa-question-circle"></i><span class="label">Def:</span> <span class="value">???.</span>
         </div>
         
+        <div class="contacts">
+            <div class="social-links">
+                <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="telegram">
+                    <i class="fab fa-telegram"></i> My fiz shop
+                </a>
+            </div>
+        </div>
+        
         <div class="visitor-counter">
             <svg class="eye-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbabyfox.shop%2Fbio-reset-v11&countColor=%239900cc&style=flat&label=&labelColor=%23A0A0A0" alt="Visitors" class="visitor-badge">
+            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbabyfox.shop%2Fbio-reset-v12&countColor=%239900cc&style=flat&label=&labelColor=%23A0A0A0" alt="Visitors" class="visitor-badge">
         </div>
     </div>
 </body>
