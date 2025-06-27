@@ -8,107 +8,240 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: 'Space Mono', monospace;
-            background-color: #000000;
-            color: #cc66ff;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            min-height: 100vh;
+            font-family: 'Kanit', sans-serif;
+            text-align: left;
             margin: 0;
-            padding: 40px 20px;
-            box-sizing: border-box;
-            background-image: url('');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            padding: 0;
+            color: #f0f0f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-color: #000000;
+            position: relative;
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 600px;
+        
+        .background-image-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
         }
-        h1 {
+        .background-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        h1.main-title {
             font-family: 'Space Mono', monospace;
-            color: #cc66ff;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        .section-title {
-            font-family: 'Space Mono', monospace;
-            color: #cc66ff;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .info-item {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            line-height: 1.4;
-        }
-        .info-item strong {
-            color: #ffffff;
+            color: #cc00ff;
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
             font-weight: 700;
+            text-shadow: 0 0 10px rgba(204, 0, 255, 0.7), 0 0 20px rgba(204, 0, 255, 0.5);
         }
-        .links a {
-            display: inline-block;
-            margin-top: 20px;
-            color: #66ccff;
+
+        .bio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .bio-item .fas { 
+            font-size: 1.5em; 
+            line-height: 1;
+            color: #9900cc !important;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+        }
+        .bio-item .label {
+            color: #A0A0A0;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+        .bio-item .value-name,
+        .bio-item .value-age,
+        .bio-item .value-phone,
+        .bio-item .value-hobbies,
+        .bio-item .value-nationality, 
+        .bio-item .value-location,
+        .bio-item .value-kasta,
+        .bio-item .value-clan,
+        .bio-item .value-def {
+            color: #cc00ff;
+            text-shadow: none; 
+        }
+
+        p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #d0d0d0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+        }
+        .love-text {
+            color: #cc00ff;
+            font-size: 1.4em;
+            margin-top: 15px;
+            margin-bottom: 35px;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(204, 0, 255, 1), 0 0 30px rgba(204, 0, 255, 0.8);
+        }
+        .contacts {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        .contacts h2 {
+            font-family: 'Space Mono', monospace;
+            color: #cc00ff;
             font-size: 1.5em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(204, 0, 255, 0.7), 0 0 15px rgba(204, 0, 255, 0.5);
+            text-align: left;
+        }
+        .contacts .social-links a {
             text-decoration: none;
-            transition: color 0.3s ease;
+            margin-bottom: 10px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            font-weight: 700;
+            display: block;
+            font-size: 1.1em;
         }
-        .links a:hover {
-            color: #ffffff;
+        .contacts .social-links a:hover {
+            filter: brightness(1.5);
+            text-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
         }
-        .links i {
-            margin-right: 10px;
+        .contacts a.telegram {
+            color: #00ccff;
+            text-shadow: 0 0 10px rgba(0, 204, 255, 0.7), 0 0 20px rgba(0, 204, 255, 0.5);
         }
-        .eye-icon {
-            font-size: 3em;
-            color: #cc66ff;
-            margin-top: 30px;
-            animation: blink 1.5s infinite alternate;
+
+        .visitor-counter {
+            margin-top: 60px;
+            text-align: left;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            color: #f0f0f0;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
         }
-        @keyframes blink {
-            from { opacity: 1; }
-            to { opacity: 0.5; }
+        .visitor-counter .eye-svg-icon {
+            width: 35px;
+            height: 35px;
+            fill: #cc00ff;
+            vertical-align: middle;
         }
-        .counter-placeholder {
-            margin-top: 30px;
-            font-size: 1em;
-            color: #999999;
+        .visitor-counter img.visitor-badge {
+            vertical-align: middle;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 20px; }
+            h1.main-title { font-size: 1.8em; margin-bottom: 20px; }
+            .bio-item { font-size: 1em; margin-bottom: 10px; gap: 8px; }
+            .bio-item .fas { font-size: 1.3em; }
+            .contacts { margin-top: 20px; margin-bottom: 20px; font-size: 1em; }
+            .contacts .social-links a { 
+                font-size: 1em; 
+                margin-bottom: 10px; 
+            }
+            .love-text { margin-top: 15px; margin-bottom: 20px; }
+            .visitor-counter { margin-top: 40px; gap: 5px; }
+            .visitor-counter .eye-svg-icon { width: 25px; height: 25px; }
+        }
+
+        @media (max-width: 480px) {
+            .content-wrapper { padding: 15px; }
+            h1.main-title { font-size: 1.5em; }
+            .bio-item { font-size: 0.9em; margin-bottom: 8px; gap: 6px; }
+            .bio-item .fas { font-size: 1.1em; }
+            .contacts { margin-top: 15px; margin-bottom: 15px; }
+            .contacts .social-links a { 
+                font-size: 0.9em; 
+                margin-bottom: 8px; 
+            }
+            .love-text { margin-top: 10px; margin-bottom: 15px; }
+            .visitor-counter { flex-direction: row; justify-content: flex-start; }
+            .visitor-counter .eye-svg-icon { width: 20px; height: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>BABYFOX BIO</h1>
+    <div class="background-image-wrapper">
+        <img src="" alt="Background Image">
+    </div>
+
+    <div class="content-wrapper">
+        <h1 class="main-title">BABYFOX BIO</h1>
 
         <div class="section-title">My bio:</div>
-        <div class="info-item">Name: <strong>BABYFOX</strong></div>
-        <div class="info-item">Age: <strong>17</strong></div>
-        <div class="info-item">Country: <strong>RUSSIA</strong></div>
-        <div class="info-item">City: <strong>Krasnoyarsk Krai</strong></div>
-        <div class="info-item">Phone number: <strong>+9887389287302</strong></div>
-        <div class="info-item">Valid number: <strong>+79999999999</strong></div>
-        <div class="info-item">Kasta: <strong>OSINT</strong></div>
-        <div class="info-item">Clan: <strong>#GAZteam</strong></div>
-        <div class="info-item">Def: <strong>???</strong></div>
-
-        <div class="section-title">My social media:</div>
-        <div class="links">
-            <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank">
-                <i class="fab fa-telegram"></i> My Shop:
-            </a>
+        <div class="bio-item">
+            <i class="fas fa-user"></i><span class="label">Name:</span> <span class="value-name">BABYFOX</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-birthday-cake"></i><span class="label">Age:</span> <span class="value-age">17</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-phone"></i><span class="label">Phone number:</span> <span class="value-phone">+9887389287302</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-flag"></i><span class="label">Country:</span> <span class="value-nationality">RUSSIA</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-map-marker-alt"></i><span class="label">City:</span> <span class="value-location">Krasnoyarsk Krai</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-gem"></i><span class="label">Kasta:</span> <span class="value-kasta">OSINT</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-users"></i><span class="label">Clan:</span> <span class="value-clan">#GAZteam</span>
+        </div>
+        <div class="bio-item">
+            <i class="fas fa-question-circle"></i><span class="label">Def:</span> <span class="value-def">???</span>
         </div>
 
-        <div class="eye-icon">
-            <i class="fas fa-eye"></i>
+        <div class="contacts">
+            <h2>My social media:</h2>
+            <div class="social-links">
+                <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="telegram">
+                    <i class="fab fa-telegram"></i> My Shop
+                </a>
+            </div>
         </div>
-        <div class="counter-placeholder">
-            Visitors: <span id="visitor-count">Loading...</span>
+        
+        <div class="visitor-counter">
+            <svg class="eye-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Funswag1337.github.io%2Ffinal-reset-path-v4&countColor=%23263759&style=flat&label=&labelColor=%23c4a2a2" alt="Visitors" class="visitor-badge">
         </div>
     </div>
 </body>
