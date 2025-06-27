@@ -63,6 +63,15 @@
             text-shadow: 0 0 10px rgba(204, 0, 255, 0.7), 0 0 20px rgba(204, 0, 255, 0.5);
         }
 
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            color: #cc00ff;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
         .bio-item {
             display: flex;
             align-items: center;
@@ -83,33 +92,20 @@
         }
         .bio-item .value-name,
         .bio-item .value-age,
-        .bio-item .value-phone,
-        .bio-item .value-hobbies,
-        .bio-item .value-nationality, 
-        .bio-item .value-location,
+        .bio-item .value-country,
+        .bio-item .value-city,
+        .bio-item .value-number,
+        .bio-item .value-valid-number,
         .bio-item .value-kasta,
         .bio-item .value-clan,
-        .bio-item .value-def {
+        .bio-item .value-def,
+        .bio-item .value-bro,
+        .bio-item .value-liks,
+        .bio-item .value-project {
             color: #cc00ff;
             text-shadow: none; 
         }
 
-        p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin-bottom: 15px;
-            text-align: left;
-            color: #d0d0d0;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
-        }
-        .love-text {
-            color: #cc00ff;
-            font-size: 1.4em;
-            margin-top: 15px;
-            margin-bottom: 35px;
-            font-weight: 700;
-            text-shadow: 0 0 15px rgba(204, 0, 255, 1), 0 0 30px rgba(204, 0, 255, 0.8);
-        }
         .contacts {
             margin-top: 25px;
             margin-bottom: 25px;
@@ -139,6 +135,28 @@
             color: #00ccff;
             text-shadow: 0 0 10px rgba(0, 204, 255, 0.7), 0 0 20px rgba(0, 204, 255, 0.5);
         }
+        .contacts a.work-link {
+            color: #66ff66;
+            text-shadow: 0 0 10px rgba(102, 255, 102, 0.7), 0 0 20px rgba(102, 255, 102, 0.5);
+        }
+        .contacts .shop-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #cc66ff;
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(204, 102, 255, 0.7), 0 0 20px rgba(204, 102, 255, 0.5);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .contacts .shop-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
+        }
+        .contacts .note {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #999999;
+        }
 
         .visitor-counter {
             margin-top: 60px;
@@ -165,6 +183,7 @@
         @media (max-width: 768px) {
             .content-wrapper { padding: 20px; }
             h1.main-title { font-size: 1.8em; margin-bottom: 20px; }
+            .section-title { font-size: 1.5em; }
             .bio-item { font-size: 1em; margin-bottom: 10px; gap: 8px; }
             .bio-item .fas { font-size: 1.3em; }
             .contacts { margin-top: 20px; margin-bottom: 20px; font-size: 1em; }
@@ -180,6 +199,7 @@
         @media (max-width: 480px) {
             .content-wrapper { padding: 15px; }
             h1.main-title { font-size: 1.5em; }
+            .section-title { font-size: 1.3em; }
             .bio-item { font-size: 0.9em; margin-bottom: 8px; gap: 6px; }
             .bio-item .fas { font-size: 1.1em; }
             .contacts { margin-top: 15px; margin-bottom: 15px; }
@@ -201,39 +221,74 @@
     <div class="content-wrapper">
         <h1 class="main-title">BABYFOX BIO</h1>
 
-        <div class="section-title">My bio:</div>
+        <div class="section-title">BIO: (BABYFOX)</div>
         <div class="bio-item">
-            <i class="fas fa-user"></i><span class="label">Name:</span> <span class="value-name">BABYFOX</span>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <div class="bio-item">
-            <i class="fas fa-birthday-cake"></i><span class="label">Age:</span> <span class="value-age">17</span>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <div class="bio-item">
-            <i class="fas fa-phone"></i><span class="label">Phone number:</span> <span class="value-phone">+9887389287302</span>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <div class="bio-item">
-            <i class="fas fa-flag"></i><span class="label">Country:</span> <span class="value-nationality">RUSSIA</span>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <div class="bio-item">
-            <i class="fas fa-map-marker-alt"></i><span class="label">City:</span> <span class="value-location">Krasnoyarsk Krai</span>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <div class="bio-item">
-            <i class="fas fa-gem"></i><span class="label">Kasta:</span> <span class="value-kasta">OSINT</span>
+            <span class="label">MY NAME::</span> <span class="value-name">𝐁𝐀𝐁𝐘𝐅𝐎𝐗</span>
         </div>
         <div class="bio-item">
-            <i class="fas fa-users"></i><span class="label">Clan:</span> <span class="value-clan">#GAZteam</span>
+            <span class="label">MY AGE::</span> <span class="value-age">17</span>
         </div>
         <div class="bio-item">
-            <i class="fas fa-question-circle"></i><span class="label">Def:</span> <span class="value-def">???</span>
+            <span class="label">MY COUNTRY::</span> <span class="value-country">USA</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">MY CITY::</span> <span class="value-city">LOS ANGELES</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">MY NUMBER::</span> <span class="value-number">+98???</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">MY VALID NUMBER::</span> <span class="value-valid-number">+7???</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐊𝐀𝐒𝐓𝐀:</span> <span class="value-kasta">𝐎𝐒𝐈𝐍𝐓</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐂𝐋𝐀𝐍:</span> <span class="value-clan">#𝙶𝙰𝚉𝚝eam</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐃𝐄𝐅:</span> <span class="value-def">???</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐁𝐑𝐎:</span> <span class="value-bro">@xSudba</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐋𝐈𝐊𝐒:</span> <span class="value-liks">𝙰𝚁𝙸𝚂𝚃𝙾𝙺𝚁𝙰𝚃</span>
+        </div>
+        <div class="bio-item">
+            <span class="label">𝐌𝐘 𝐏𝐑𝐎𝐉𝐄𝐂𝐓:</span> <span class="value-project">???</span>
         </div>
 
         <div class="contacts">
-            <h2>My social media:</h2>
+            <h2>𝐌𝐘 𝐖𝐎𝐑𝐊</h2>
             <div class="social-links">
-                <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="telegram">
-                    <i class="fab fa-telegram"></i> My Shop
+                <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="telegram work-link">
+                    СЮДА ТЫКАТЬ
                 </a>
             </div>
+            <p class="note">ВСЕ ЧАТЫ НЕ ПРИНАДЛЕЖАТ К ЭТОМУ АККАУНТУ!!</p>
+        </div>
+
+        <div class="contacts">
+            <h2>А ТАКЖЕ МОЙ ЛИЧНЫЙ ФИЗ ШОП</h2>
+            <a href="https://t.me/FIZSHOPOTBABYFOX" target="_blank" class="shop-link">
+                ФИЗ ШОП
+            </a>
         </div>
         
         <div class="visitor-counter">
@@ -241,7 +296,7 @@
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Funswag1337.github.io%2Ffinal-reset-path-v4&countColor=%23263759&style=flat&label=&labelColor=%23c4a2a2" alt="Visitors" class="visitor-badge">
+            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbabyfox.shop%2Fbio-reset-v2&countColor=%23cc00ff&style=flat&label=&labelColor=%23A0A0A0" alt="Visitors" class="visitor-badge">
         </div>
     </div>
 </body>
